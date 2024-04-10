@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0f0e17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.pemuat {
+    display: inline-flex;
+    border: 2px solid #fffffe;
+    --c: no-repeat linear-gradient(#fffffe 0 0) 50%;
+    background:
+        var(--c) calc(50% - 5px)/5px 5px,
+        var(--c) calc(50% + 5px)/5px 5px;
+}
+
+.pemuat::before,
+.pemuat::after {
+    content: "12 00 23 40 31 45 60 17 45 32 29 42 50 08 14 07 46 11 03 55";
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: 1em;
+    height: 1em;
+    width: 2ch;
+    color: #0000;
+    text-shadow: 0 0 0 #fffffe;
+    overflow: hidden;
+    margin: 5px 10px;
+    animation: gerak 1s steps(20) infinite;
+}
+
+.pemuat::before {
+    animation-duration: 1.5s;
+}
+
+@keyframes gerak {
+    100% {
+        text-shadow: 0 -20em 0 #fffffe
+    }
+}
